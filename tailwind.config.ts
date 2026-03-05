@@ -47,6 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        gmv: {
+          dark: "hsl(var(--gmv-dark))",
+          green: "hsl(var(--gmv-green))",
+          gold: "hsl(var(--gmv-gold))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

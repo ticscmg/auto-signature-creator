@@ -10,6 +10,7 @@ const Index = () => {
   const previewRef = useRef<HTMLDivElement>(null);
   const [data, setData] = useState({
     nome: "",
+    filial: "",
     cargo: "",
     telefone: "",
     email: "",

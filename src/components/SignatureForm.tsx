@@ -1,8 +1,27 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+const FILIAIS = [
+  "Matriz - CSC",
+  "Só Marcas BH Outlet",
+  "Só Marcas Contagem",
+  "Só Marcas Guarulhos",
+  "Shopping Oiapoque BH",
+  "Shopping Oiapoque Contagem",
+  "Shopping do Avião",
+  "Shopping Tupinambás",
+];
 
 interface SignatureData {
   nome: string;
+  filial: string;
   cargo: string;
   telefone: string;
   email: string;
@@ -33,6 +52,23 @@ const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
           onChange={(e) => update("nome", e.target.value)}
           className="bg-card border-border"
         />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="filial" className="text-sm font-medium text-foreground">
+          Filial
+        </Label>
+        <Select value={data.filial} onValueChange={(value) => update("filial", value)}>
+          <SelectTrigger className="bg-card border-border">
+            <SelectValue placeholder="Selecione a filial" />
+          </SelectTrigger>
+          <SelectContent>
+            {FILIAIS.map((f) => (
+              <SelectItem key={f} value={f}>
+                {f}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
       <div className="space-y-2">
         <Label htmlFor="cargo" className="text-sm font-medium text-foreground">

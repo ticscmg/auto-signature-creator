@@ -49,7 +49,7 @@ export default {
         },
         gmv: {
           dark: "hsl(var(--gmv-dark))",
-          green: "hsl(var(--gmv-green))",
+          blue: "hsl(var(--gmv-blue))",
           gold: "hsl(var(--gmv-gold))",
         },
         sidebar: {

@@ -6,6 +6,8 @@ interface SignatureData {
   cargo: string;
   telefone: string;
   email: string;
+  endereco: string;
+  cidade: string;
 }
 
 interface SignatureFormProps {
@@ -26,7 +28,7 @@ const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
         </Label>
         <Input
           id="nome"
-          placeholder="João da Silva"
+          placeholder="Gustavo Barbosa de Souza"
           value={data.nome}
           onChange={(e) => update("nome", e.target.value)}
           className="bg-card border-border"
@@ -38,7 +40,7 @@ const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
         </Label>
         <Input
           id="cargo"
-          placeholder="Gerente Comercial"
+          placeholder="Analista de TI Sênior V"
           value={data.cargo}
           onChange={(e) => update("cargo", e.target.value)}
           className="bg-card border-border"
@@ -46,11 +48,11 @@ const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
       </div>
       <div className="space-y-2">
         <Label htmlFor="telefone" className="text-sm font-medium text-foreground">
-          Telefone
+          Telefone (WhatsApp)
         </Label>
         <Input
           id="telefone"
-          placeholder="(11) 99999-9999"
+          placeholder="31.9.9589-8283"
           value={data.telefone}
           onChange={(e) => update("telefone", e.target.value)}
           className="bg-card border-border"
@@ -63,9 +65,33 @@ const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
         <Input
           id="email"
           type="email"
-          placeholder="joao@gmv.com.br"
+          placeholder="gustavo.souza@gpmv.com.br"
           value={data.email}
           onChange={(e) => update("email", e.target.value)}
+          className="bg-card border-border"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="endereco" className="text-sm font-medium text-foreground">
+          Endereço
+        </Label>
+        <Input
+          id="endereco"
+          placeholder="BR-356, 7515 – Belvedere"
+          value={data.endereco}
+          onChange={(e) => update("endereco", e.target.value)}
+          className="bg-card border-border"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="cidade" className="text-sm font-medium text-foreground">
+          Cidade / UF / CEP
+        </Label>
+        <Input
+          id="cidade"
+          placeholder="Belo Horizonte/MG – CEP 30320-765"
+          value={data.cidade}
+          onChange={(e) => update("cidade", e.target.value)}
           className="bg-card border-border"
         />
       </div>

@@ -13,6 +13,8 @@ const Index = () => {
     cargo: "",
     telefone: "",
     email: "",
+    endereco: "",
+    cidade: "",
   });
 
   const handleDownload = useCallback(async () => {

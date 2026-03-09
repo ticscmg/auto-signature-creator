@@ -76,7 +76,7 @@ const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
         </Label>
         <Input
           id="cargo"
-          placeholder="Analista de TI Sênior V"
+          placeholder="Presidente"
           value={data.cargo}
           onChange={(e) => update("cargo", e.target.value)}
           className="bg-card border-border"

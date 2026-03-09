@@ -101,7 +101,7 @@ const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
         <Input
           id="email"
           type="email"
-          placeholder="gustavo.souza@gpmv.com.br"
+          placeholder="mario.valadares@gpmv.com.br"
           value={data.email}
           onChange={(e) => update("email", e.target.value)}
           className="bg-card border-border"

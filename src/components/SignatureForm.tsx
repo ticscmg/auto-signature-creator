@@ -9,14 +9,14 @@ import {
 } from "@/components/ui/select";
 
 const FILIAIS = [
-  "Matriz - CSC",
-  "Só Marcas BH Outlet",
-  "Só Marcas Contagem",
-  "Só Marcas Guarulhos",
-  "Shopping Oiapoque BH",
-  "Shopping Oiapoque Contagem",
-  "Shopping do Avião",
-  "Shopping Tupinambás",
+  "1. Matriz - CSC",
+  "2. Só Marcas BH Outlet",
+  "3. Só Marcas Contagem",
+  "4. Só Marcas Guarulhos",
+  "5. Shopping Oiapoque BH",
+  "6. Shopping Oiapoque Contagem",
+  "7. Shopping do Avião",
+  "8. Shopping Tupinambás",
 ];
 
 interface SignatureData {

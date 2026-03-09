@@ -39,7 +39,11 @@ interface SignatureFormProps {
 
 const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
   const update = (field: keyof SignatureData, value: string) => {
-    onChange({ ...data, [field]: value });
+    if (field === "filial" && FILIAIS_DATA[value]) {
+      onChange({ ...data, filial: value, endereco: FILIAIS_DATA[value].endereco, cidade: FILIAIS_DATA[value].cidade });
+    } else {
+      onChange({ ...data, [field]: value });
+    }
   };
 
   return (

@@ -17,6 +17,7 @@ const FILIAIS = [
   "6. Shopping Oiapoque Contagem",
   "7. Shopping do Avião",
   "8. Shopping Tupinambás",
+  "9. Tupinambás Motos",
 ];
 
 interface SignatureData {

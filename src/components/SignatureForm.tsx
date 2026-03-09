@@ -47,7 +47,7 @@ const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
         </Label>
         <Input
           id="nome"
-          placeholder="Gustavo Barbosa de Souza"
+          placeholder="Mário Valadares de Resende Costa"
           value={data.nome}
           onChange={(e) => update("nome", e.target.value)}
           className="bg-card border-border"

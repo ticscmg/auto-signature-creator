@@ -88,7 +88,7 @@ const SignatureForm = ({ data, onChange }: SignatureFormProps) => {
         </Label>
         <Input
           id="telefone"
-          placeholder="31.9.9589-8283"
+          placeholder="31.9.9999-9999"
           value={data.telefone}
           onChange={(e) => update("telefone", e.target.value)}
           className="bg-card border-border"

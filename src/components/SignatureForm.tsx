@@ -8,17 +8,19 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const FILIAIS = [
-  "1. Matriz - CSC",
-  "2. Só Marcas BH Outlet",
-  "3. Só Marcas Contagem",
-  "4. Só Marcas Guarulhos",
-  "5. Shopping Oiapoque BH",
-  "6. Shopping Oiapoque Contagem",
-  "7. Shopping do Avião",
-  "8. Shopping Tupinambás",
-  "9. Tupinambás Motos",
-];
+const FILIAIS_DATA: Record<string, { endereco: string; cidade: string }> = {
+  "1. Matriz - CSC": { endereco: "BR-356, 7515 – Belvedere", cidade: "Belo Horizonte/MG – CEP 30320-765" },
+  "2. Só Marcas BH Outlet": { endereco: "BR-356, 7515 – Belvedere", cidade: "Belo Horizonte/MG – CEP 30320-765" },
+  "3. Só Marcas Contagem": { endereco: "Av. Cardeal Eugênio Pacelli, 1336 – Cidade Industrial", cidade: "Contagem/MG – CEP 32210-002" },
+  "4. Só Marcas Guarulhos": { endereco: "Rod. Pres. Dutra, KM 222 - 3 – Jardim Santa Francisca", cidade: "Guarulhos/SP – CEP 07034-000" },
+  "5. Shopping Oiapoque BH": { endereco: "Av. Oiapoque, 156 – Centro", cidade: "Belo Horizonte/MG – CEP 30111-070" },
+  "6. Shopping Oiapoque Contagem": { endereco: "Mario Vital, 168 – Eldorado", cidade: "Contagem/MG – CEP 32315-160" },
+  "7. Shopping do Avião": { endereco: "Avenida Babita Camargos, 1295 – Cidade Industrial", cidade: "Contagem/MG – CEP 32210-180" },
+  "8. Shopping Tupinambás": { endereco: "Rio Grande do Sul, 189 – Centro", cidade: "Belo Horizonte/MG – CEP 30170-110" },
+  "9. Tupinambás Motos": { endereco: "Avenida do Contorno, 11320 – Centro", cidade: "Belo Horizonte/MG – CEP 30110-042" },
+};
+
+const FILIAIS = Object.keys(FILIAIS_DATA);
 
 interface SignatureData {
   nome: string;

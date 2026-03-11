@@ -15,7 +15,7 @@ const Index = () => {
     telefone: "",
     email: "",
     endereco: "",
-    cidade: "",
+    cidade: ""
   });
 
   const handleDownload = useCallback(async () => {
@@ -24,7 +24,7 @@ const Index = () => {
       const dataUrl = await toPng(previewRef.current, {
         width: 1250,
         height: 350,
-        pixelRatio: 2,
+        pixelRatio: 2
       });
       const link = document.createElement("a");
       link.download = `assinatura-${data.nome || "gmv"}.png`;
@@ -70,8 +70,8 @@ const Index = () => {
             <Button
               onClick={handleDownload}
               className="w-full mt-6 gap-2"
-              size="lg"
-            >
+              size="lg">
+              
               <Download className="w-4 h-4" />
               Baixar Assinatura (PNG)
             </Button>
@@ -79,7 +79,7 @@ const Index = () => {
 
           {/* Preview */}
           <div className="space-y-4">
-            <h2 className="text-base font-semibold text-foreground">
+            <h2 className="text-base font-semibold text-primary-foreground">
               Pré-visualização
             </h2>
             <div className="bg-card rounded-xl border border-border p-6 shadow-sm overflow-x-auto">
@@ -87,15 +87,15 @@ const Index = () => {
                 <SignaturePreview ref={previewRef} data={data} />
               </div>
             </div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-primary-foreground">
               A imagem será gerada em 1250×350px com alta resolução (2x) para
               ficar nítida no Outlook.
             </p>
           </div>
         </div>
       </main>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;

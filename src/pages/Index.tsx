@@ -37,7 +37,7 @@ const Index = () => {
   }, [data.nome]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* Header */}
       <header className="border-b border-border bg-card">
         <div className="container mx-auto flex items-center justify-between py-5 px-4">

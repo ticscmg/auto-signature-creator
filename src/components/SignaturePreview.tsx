@@ -1,8 +1,22 @@
 import { forwardRef } from "react";
 import fundoAss from "@/assets/Fundoass.png";
+import fundoAssBHO from "@/assets/FundoAssBHO.png";
+
+const FILIAL_BACKGROUNDS: Record<string, string> = {
+  "1. Matriz - CSC": fundoAss,
+  "2. Só Marcas BH Outlet": fundoAssBHO,
+  "3. Só Marcas Contagem": fundoAss,
+  "4. Só Marcas Guarulhos": fundoAss,
+  "5. Shopping Oiapoque BH": fundoAss,
+  "6. Shopping Oiapoque Contagem": fundoAss,
+  "7. Shopping do Avião": fundoAss,
+  "8. Shopping Tupinambás": fundoAss,
+  "9. Tupinambás Motos": fundoAss,
+};
 
 interface SignatureData {
   nome: string;
+  filial: string;
   cargo: string;
   telefone: string;
   email: string;
@@ -13,6 +27,7 @@ interface SignatureData {
 const SignaturePreview = forwardRef<HTMLDivElement, { data: SignatureData }>(
   ({ data }, ref) => {
     const bluePrimary = "#1a5091";
+    const bgImage = FILIAL_BACKGROUNDS[data.filial] || fundoAss;
 
     return (
       <div
@@ -23,7 +38,7 @@ const SignaturePreview = forwardRef<HTMLDivElement, { data: SignatureData }>(
           fontFamily: "'Segoe UI', Arial, sans-serif",
           overflow: "hidden",
           position: "relative",
-          backgroundImage: `url(${fundoAss})`,
+          backgroundImage: `url(${bgImage})`,
           backgroundSize: "1250px 350px",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

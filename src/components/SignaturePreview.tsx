@@ -3,7 +3,7 @@ import fundoAss from "@/assets/Fundoass.png";
 import fundoAssBHO from "@/assets/FundoAssBHO.png";
 import fundoAssSMCTG from "@/assets/fundoAssSMCTG.png";
 import fundoAssSMGRU from "@/assets/fundoAssSMGRU.png";
-import fundoAssOIBH from "@/assets/FundoAss/fundoAssOIBH.png";
+import fundoAssOIBH from "@/assets/fundoAssOIBH.png";
 import fundoAssOICTG from "@/assets/fundoAssOICTG.png";
 import fundoAssAviao from "@/assets/fundoAssAviao.png";
 import fundoAssTupi from "@/assets/fundoAssTupi.png";

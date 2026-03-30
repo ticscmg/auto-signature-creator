@@ -1,17 +1,23 @@
 import { forwardRef } from "react";
 import fundoAss from "@/assets/Fundoass.png";
 import fundoAssBHO from "@/assets/FundoAssBHO.png";
+import fundoAssSMCTG from "@/assets/fundoAssSMCTG.png";
+import fundoAssSMGRU from "@/assets/fundoAssSMGRU.png";
+import fundoAssOIBH from "@/assets/FundoAss/fundoAssOIBH.png";
+import fundoAssOICTG from "@/assets/fundoAssOICTG.png";
+import fundoAssAviao from "@/assets/fundoAssAviao.png";
+import fundoAssTupi from "@/assets/fundoAssTupi.png";
 
 const FILIAL_BACKGROUNDS: Record<string, string> = {
   "1. Matriz - CSC": fundoAss,
   "2. Só Marcas BH Outlet": fundoAssBHO,
-  "3. Só Marcas Contagem": fundoAss,
-  "4. Só Marcas Guarulhos": fundoAss,
-  "5. Shopping Oiapoque BH": fundoAss,
-  "6. Shopping Oiapoque Contagem": fundoAss,
-  "7. Shopping do Avião": fundoAss,
-  "8. Shopping Tupinambás": fundoAss,
-  "9. Tupinambás Motos": fundoAss,
+  "3. Só Marcas Contagem": fundoAssSMCTG,
+  "4. Só Marcas Guarulhos": fundoAssSMGRU,
+  "5. Shopping Oiapoque BH": fundoAssOIBH,
+  "6. Shopping Oiapoque Contagem": fundoAssOICTG,
+  "7. Shopping do Avião": fundoAssAviao,
+  "8. Shopping Tupinambás": fundoAssTupi,
+  "9. Tupinambás Motos": fundoAssTupi,
 };
 
 interface SignatureData {

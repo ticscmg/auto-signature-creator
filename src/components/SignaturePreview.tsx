@@ -27,6 +27,7 @@ interface SignatureData {
 const SignaturePreview = forwardRef<HTMLDivElement, { data: SignatureData }>(
   ({ data }, ref) => {
     const bluePrimary = "#1a5091";
+    const bgImage = FILIAL_BACKGROUNDS[data.filial] || fundoAss;
 
     return (
       <div
@@ -37,7 +38,7 @@ const SignaturePreview = forwardRef<HTMLDivElement, { data: SignatureData }>(
           fontFamily: "'Segoe UI', Arial, sans-serif",
           overflow: "hidden",
           position: "relative",
-          backgroundImage: `url(${fundoAss})`,
+          backgroundImage: `url(${bgImage})`,
           backgroundSize: "1250px 350px",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

@@ -1,13 +1,20 @@
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import { toPng } from "html-to-image";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import SignatureForm from "@/components/SignatureForm";
 import SignaturePreview from "@/components/SignaturePreview";
 import { toast } from "sonner";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const Index = () => {
   const previewRef = useRef<HTMLDivElement>(null);
+  const [showWelcome, setShowWelcome] = useState(true);
   const [data, setData] = useState({
     nome: "",
     filial: "",
@@ -94,8 +101,25 @@ const Index = () => {
           </div>
         </div>
       </main>
-    </div>);
-
+      {/* Welcome Popup */}
+      <Dialog open={showWelcome} onOpenChange={setShowWelcome}>
+        <DialogContent
+          className="max-w-md border-none shadow-2xl overflow-hidden"
+          style={{
+            backgroundImage: "url('/images/bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <DialogHeader className="pt-8 pb-6">
+            <DialogTitle className="text-2xl font-bold text-primary-foreground text-center">
+              Bem-vindo ao Gerador de Assinatura
+            </DialogTitle>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+    </div>
+  );
 };
 
 export default Index;

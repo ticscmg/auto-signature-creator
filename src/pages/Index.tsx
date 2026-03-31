@@ -101,8 +101,25 @@ const Index = () => {
           </div>
         </div>
       </main>
-    </div>);
-
+      {/* Welcome Popup */}
+      <Dialog open={showWelcome} onOpenChange={setShowWelcome}>
+        <DialogContent
+          className="max-w-md border-none shadow-2xl overflow-hidden"
+          style={{
+            backgroundImage: "url('/images/bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <DialogHeader className="pt-8 pb-6">
+            <DialogTitle className="text-2xl font-bold text-primary-foreground text-center">
+              Bem-vindo ao Gerador de Assinatura
+            </DialogTitle>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+    </div>
+  );
 };
 
 export default Index;

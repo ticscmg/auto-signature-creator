@@ -14,6 +14,7 @@ import {
 
 const Index = () => {
   const previewRef = useRef<HTMLDivElement>(null);
+  const [showWelcome, setShowWelcome] = useState(true);
   const [data, setData] = useState({
     nome: "",
     filial: "",

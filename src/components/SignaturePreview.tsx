@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import fundoAss from "@/assets/Fundoass.png";
-import fundoAssBHO from "@/assets/FundoAssBHO.png";
+import fundoAssBHO from "@/assets/fundoAssBHO.png";
 import fundoAssSMCTG from "@/assets/fundoAssSMCTG.png";
 import fundoAssSMGRU from "@/assets/fundoAssSMGRU.png";
 import fundoAssOIBH from "@/assets/fundoAssOIBH.png";

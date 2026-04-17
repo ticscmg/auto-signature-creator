@@ -29,9 +29,17 @@ const Index = () => {
     if (!previewRef.current) return;
     try {
       const dataUrl = await toPng(previewRef.current, {
-        width: 1250,
-        height: 350,
-        pixelRatio: 2
+        width: 876,
+        height: 244,
+        pixelRatio: 1,
+        canvasWidth: 876,
+        canvasHeight: 244,
+        style: {
+          transform: `scale(${876 / 1250})`,
+          transformOrigin: "top left",
+          width: "1250px",
+          height: "350px",
+        },
       });
       const link = document.createElement("a");
       link.download = `assinatura-${data.nome || "gmv"}.png`;

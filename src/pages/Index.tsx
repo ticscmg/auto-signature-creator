@@ -124,6 +124,14 @@ const Index = () => {
               Bem-vindo ao Gerador de Assinatura
             </DialogTitle>
           </DialogHeader>
+          <div className="flex justify-center pb-8">
+            <Button asChild size="lg" className="gap-2">
+              <a href="/videos/tutorial.mp4" download="tutorial.mp4">
+                <Download className="w-4 h-4" />
+                Download Tutorial
+              </a>
+            </Button>
+          </div>
         </DialogContent>
       </Dialog>
     </div>
